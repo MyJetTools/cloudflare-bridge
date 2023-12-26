@@ -1,0 +1,26 @@
+[package]
+name = "cloudflare-bridge"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+my-http-server = { tag = "0.7.0", git = "https://github.com/MyJetTools/my-http-server.git", features = [
+    "macros",
+    "controllers",
+] }
+
+rust-extensions = { tag = "0.1.4", git = "https://github.com/MyJetTools/rust-extensions.git" }
+
+my-logger = { tag = "1.1.0", git = "https://github.com/MyJetTools/my-logger.git" }
+
+tokio = { version = "*", features = ["full"] }
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+async-trait = "*"
+flurl = { tag = "0.5.0", git = "https://github.com/MyJetTools/fl-url.git" }
+
+my-settings-reader = { tag = "0.3.0", git = "https://github.com/MyJetTools/my-settings-reader.git", features = [
+    "background-reader",
+] }
