@@ -15,7 +15,7 @@ use crate::app::AppContext;
     input_data: GetListOfDomainsByDnsZoneHttpInput,
 
     result:[
-        {status_code: 200, description: "Ok response"},
+        {status_code: 200, description: "Ok response", model: "Vec<CloudFlareDnsRecordHttpModel>"},
         {status_code: 401, description: "Domain is not setup"},
     ]
 )]
