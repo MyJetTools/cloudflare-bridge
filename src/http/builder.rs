@@ -19,5 +19,9 @@ pub fn build_controllers(app: &Arc<AppContext>) -> ControllersMiddleware {
         app.clone(),
     )));
 
+    result.register_delete_action(Arc::new(
+        super::controllers::dns::DeleteDnsRecordAction::new(app.clone()),
+    ));
+
     result
 }

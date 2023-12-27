@@ -50,6 +50,7 @@ async fn handle_request(
 
             for itm in result {
                 response.push(CloudFlareDnsRecordHttpModel {
+                    id: itm.id,
                     tp: itm.r#type,
                     name: itm.name,
                     content: itm.content,
@@ -73,6 +74,7 @@ pub struct GetListOfDomainsByDnsZoneHttpInput {
 
 #[derive(MyHttpObjectStructure, Serialize)]
 pub struct CloudFlareDnsRecordHttpModel {
+    pub id: String,
     pub name: String,
     pub tp: String,
     pub content: String,

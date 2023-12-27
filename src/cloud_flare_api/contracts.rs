@@ -7,7 +7,7 @@ pub struct ErrorContract {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct CreateModelResponse {
+pub struct CloudFlareModelResponse {
     pub success: bool,
     pub errors: Option<Vec<ErrorContract>>,
 }
