@@ -50,8 +50,8 @@ async fn handle_request(
 
 #[derive(MyHttpInput)]
 pub struct DeleteDomainRecordHttpInput {
-    #[http_body(description:"domain name")]
+    #[http_query(description:"domain name")]
     pub domain: String,
-    #[http_body(description:"id of record")]
+    #[http_query(description:"id of record")]
     pub id: String,
 }
